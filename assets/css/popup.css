@@ -1,0 +1,52 @@
+/* Modal overlay style */
+.modal-overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0; /* Start with 0 opacity */
+    transition: opacity 0.3s ease; /* Smooth fade-in/fade-out effect */
+}
+
+/* Style for the image inside the modal */
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    transform: scale(0.8); /* Start smaller */
+    transition: transform 0.3s ease; /* Smooth scale-up effect */
+}
+
+/* Smooth fade-in effect for the gallery images */
+.speaker img {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+}
+
+.speaker img.visible {
+    opacity: 1;
+    
+}
+
+/* Close button style */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: rgb(225, 12, 12);
+    cursor: pointer;
+    z-index: 2000;
+    transition: transform 0.3s ease;
+}
+
+/* Close button hover effect */
+.close-btn:hover {
+    transform: scale(1.2); /* Slight enlargement on hover */
+}
